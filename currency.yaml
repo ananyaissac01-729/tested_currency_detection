@@ -1,0 +1,13 @@
+path: dataset
+
+train: train/images
+val: val/images
+
+names:
+  0: 10_rupee
+  1: 20_rupee
+  2: 50_rupee
+  3: 100_rupee
+  4: 200_rupee
+  5: 500_rupee
+  6: 2000_rupee
