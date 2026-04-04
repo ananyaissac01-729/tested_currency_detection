@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from PIL import Image
 import streamlit as st
 
-model = YOLO("runs/detect/train2/weights/best.pt")
+model = YOLO("best.pt")
 
 st.title("Indian Currency Detection")
 
@@ -22,11 +22,11 @@ if uploaded_file is not None:
             class_id = int(box.cls[0])
             class_name = r.names[class_id]
             if class_name == "not_currency":
-                if conf > 0.85:
+                if conf > 0.92:
                     st.error("Not real currency")
                 else:
                     note = "Unknown"
-            elif conf > 0.8:
+            elif conf > 0.92:
                 note = class_name.split("_")[0]
                 st.success(f"The note is ₹{note}")
             else:
