@@ -11,3 +11,4 @@ names:
   4: 200_rupee
   5: 500_rupee
   6: 2000_rupee
+  7: not_currency
