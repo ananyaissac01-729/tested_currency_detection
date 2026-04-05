@@ -14,7 +14,7 @@ print(f"Input shape : {input_details[0]['shape']}")
 print(f"Output shape: {output_details[0]['shape']}")
 
 # preprocess image
-image = Image.open("test1.jpg").convert("RGB").resize((640, 640))
+image = Image.open("aaa.jpeg").convert("RGB").resize((640, 640))
 input_data = np.array(image, dtype=np.float32) / 255.0
 input_data = np.transpose(input_data, (2, 0, 1))  # HWC → CHW
 input_data = np.expand_dims(input_data, axis=0)   # (1, 3, 640, 640)
